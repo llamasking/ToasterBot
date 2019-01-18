@@ -49,7 +49,12 @@ client.on("message", async message => {
   // Remove user's role.
   xmember.removeRole(xrole.id);
 
+  // Case closed message
+  message.channel.send("Case closed proceed with purging the channel.");
+  
+  /*
   // Purge channel.
   message.channel.bulkDelete(100);
+  */
 });
 client.login(config.token);
